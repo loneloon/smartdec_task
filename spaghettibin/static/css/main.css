@@ -1,0 +1,315 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+:root {
+    --main-color: #E3BAC6;
+}
+
+body {
+    margin: auto 0;
+    background-image: linear-gradient(170deg, rgba(238,192,174,0.3) 0%, rgba(199,179,213,0.5) 100%), url("../img/bg2.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: top left, center center;
+    background-attachment: fixed, fixed;
+
+    color: #ffffff;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.65;
+}
+
+.bg_wrapper {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: rgba(0,0,0,1);
+    background-position: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg_overlay {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-image: linear-gradient(170deg, rgba(238,192,174,0.3) 0%, rgba(199,179,213,0.5) 100%), url("../img/bg2.jpg");
+    background-repeat: no-repeat, repeat;
+    background-position: cover, cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translate3d(0, 0, 0);
+}
+
+header {
+    visibility: hidden;
+    display: grid;
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
+    min-width: 420px;
+}
+
+header .content {
+    margin: auto;
+    
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    letter-spacing: 0.2rem;
+    
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    padding: 0px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.site_name {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+}
+
+.content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(10.9rem - 2px);
+    left: calc(50% - 2px);
+    width: 2px;
+    height: calc(2rem - 1px);
+    background: #ffffff;
+}
+
+.logo {
+    visibility: visible;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: -20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 100%;
+    padding-left: 5px;
+}
+
+.control_bar {
+    margin: auto;
+    margin-top: 2rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.4rem;
+}
+
+.control_bar button {
+    background-color: transparent;
+    border-style: none;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0px;
+    border-right-width: 2px;
+    padding: 1rem;
+    margin: auto 0;
+}
+
+.control_bar :last-child {
+    border-style: none;
+}
+
+.control_bar :hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header .control_bar::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(20.8rem);
+    left: calc(50% - 2px);
+    width: 2px;
+    height: calc(2rem + 2px);
+    background: #ffffff;
+}
+
+.mid_section {
+    visibility: hidden;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    min-width: 25rem;
+}
+
+.note {
+    background-color: rgba(33, 41, 48, 0.8);
+    padding: 4rem;
+    margin-bottom: 4rem;
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+}
+
+.note_text {
+    margin-top: 1.5rem;
+    border-width: 0px;
+    border-radius: 0%;
+    background-color: #394656;
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.2);
+}
+
+.note_actions {
+
+}
+
+textarea {
+    width: 100%;
+    max-width: 41.5rem;
+    min-height: 10rem;
+}
+
+button:focus {
+    outline-width: 0;
+}
+
+
+.roll-in-blurred-top {
+	-webkit-animation: roll-in-blurred-top 3s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+	        animation: roll-in-blurred-top 3s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 2s ease-in both;
+	        animation: fade-in 2s ease-in both;
+}
+
+.fade-out {
+	-webkit-animation: fade-out 3s ease-in both;
+	        animation: fade-out 3s ease-in both;
+}
+
+
+@-webkit-keyframes roll-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-720deg);
+            transform: translateY(-800px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-blurred-top {
+  0% {
+    -webkit-transform: translateY(-800px) rotate(-720deg);
+            transform: translateY(-800px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.bg-pan-right {
+	-webkit-animation: bg-pan-right 130s linear infinite alternate-reverse both;
+	        animation: bg-pan-right 130s linear infinite alternate-reverse both;
+}
+
+@-webkit-keyframes bg-pan-right {
+  0% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 100% 40%;
+  }
+}
+@keyframes bg-pan-right {
+  0% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 100% 40%;
+  }
+}
+
+@media (max-width: 2000px) {
+
+.bg_overlay{
+    visibility: visible;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+.content::before {
+    left: calc(210px - 2px);
+    }
+
+header .control_bar::before {
+    left: calc(210px - 2px);
+    }
+
+}

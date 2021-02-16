@@ -1,0 +1,39 @@
+<!doctype html>
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link href="{% static 'css/prism.css' %}" rel="stylesheet" />
+
+    <script src="{% static 'js/action.js' %}"></script>
+    <script></script>
+    <title>Spaghetti Bin</title>
+</head>
+
+<body>
+<div class="bg_overlay bg-pan-right"></div>
+<div class="bg_wrapper fade-out"></div>
+
+<header id="header">
+    <div class="logo roll-in-blurred-top">
+        {% include 'mainapp/includes/inc__logo_vector.html' %}
+    </div>
+    <div class="content" id="l1">
+        <div class="site_name"><b>SPAGHETTI BIN</b></div>
+        we can finally judge your code publicly
+    </div>
+    <nav class="control_bar" id="l2">
+        <button onclick="newNote()">CREATE</button><button onclick="refreshList()">REFRESH</button><button>CONTACT</button>
+    </nav>
+</header>
+
+<div class="mid_section" id="middle">
+
+</div>
+
+</body>
+</html>
