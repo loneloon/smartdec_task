@@ -56,6 +56,11 @@ function refreshList(){
                 <button onclick="editNote(${data[note_id].id})">EDIT</button><button onclick="deleteNote(${data[note_id].id})">DELETE</button></div></div>`;
             mid_section.innerHTML+= note_html;
         }
+
+        if (!mid_section.innerHTML){
+            mid_section.innerHTML+="<div style='text-align: center;'><i>No one posted here yet... Be the first one! (Click create)<i></div>";
+        }
+
     }).then(function(){
         prism_init()
     })
